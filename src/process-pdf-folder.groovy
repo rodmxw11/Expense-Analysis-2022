@@ -99,14 +99,15 @@ Closure process_summary_info = {
 }
 
 
-File amazon_folder = new File('../Amazon-Card')
+File amazon_folder = new File('../data/Amazon-Card')
 assert amazon_folder.exists()
 
 
 File year_folder = new File(amazon_folder, year)
 assert year_folder.exists(),"ERROR: year folder does not exist: ${year_folder.absolutePath}"
 
-File output_folder = new File('./text-OUT')
+File output_folder = new File('../temp/text-OUT')
+output_folder.mkdir()
 assert output_folder.exists()
 
 Closure process_pdf = {
