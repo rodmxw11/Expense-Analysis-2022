@@ -59,17 +59,17 @@ databaseChangeLog:
         # Amazon monthly summary
         # filename,open_date,close_date,new_bal,bonus_points,prev_bal,payments,purchases,cash_advance,fees,interest
         - createTable:
-           tableName: amazon_summary
-           columns:
-             - column:
-                 name: amazon_summary_id
-                 type: INT
-                 autoIncrement: true
-                 startWith: 1001
-                 constraints:
+            tableName: amazon_summary
+            columns:
+              - column:
+                  name: amazon_summary_id
+                  type: INT
+                  autoIncrement: true
+                  startWith: 1001
+                  constraints:
                     primaryKey: true
                     nullable: false
-             - column: # csv file
+              - column: # csv file
                   name: csv_file_id
                   type: INT
                   constraints:
@@ -78,37 +78,37 @@ databaseChangeLog:
                       onDelete: "NO ACTION"
                       onUpdate: "NO ACTION"
                       references: csv_file(csv_file_id)
-             - column:
-                 name: open_date
-                 type: date
-                 constraints:
-                   nullable: false
-             - column:
-                 name: close_date
-                 type: date
-                 constraints:
-                   nullable: false
-             - column:
+              - column:
+                  name: open_date
+                  type: date
+                  constraints:
+                      nullable: false
+              - column:
+                  name: close_date
+                  type: date
+                  constraints:
+                      nullable: false
+              - column:
                   name: new_balance
                   type: currency
                   constraints:
                       nullable: false
-             - column:
+              - column:
                   name: bonus_points
                   type: int
                   constraints:
                       nullable: false
-             - column:
+              - column:
                   name: previous_balance
                   type: currency
                   constraints:
                       nullable: false
-             - column:
+              - column:
                   name: payments
                   type: currency
                   constraints:
                       nullable: false
-             - column:
+              - column:
                   name: purchases
                   type: currency
                   constraints:
@@ -118,12 +118,12 @@ databaseChangeLog:
                   type: currency
                   constraints:
                       nullable: false
-             - column:
+              - column:
                   name: fees
                   type: currency
                   constraints:
                       nullable: false
-             - column:
+              - column:
                   name: interest
                   type: currency
                   constraints:
@@ -131,36 +131,36 @@ databaseChangeLog:
 
 
         # Account category
-	- createTable:
-	     tableName: category
-             columns:
-                - column:
-                    name: category_id
-                    type: INT
-                    autoIncrement: true
-                    startWith: 1001
-                    constraints:
-                        primaryKey: true
-                        nullable: false
-               - column:
+        - createTable:
+            tableName: category
+            columns:
+              - column:
+                  name: category_id
+                  type: INT
+                  autoIncrement: true
+                  startWith: 1001
+                  constraints:
+                      primaryKey: true
+                      nullable: false
+              - column:
                   name: category
                   type: varchar(256)
                   constraints:
-                    nullable: false
-	
+                      nullable: false
+        
         # Account label
-	- createTable:
-	     tableName: account_label
-             columns:
-                - column:
-                    name: account_label_id
-                    type: INT
-                    autoIncrement: true
-                    startWith: 1001
-                    constraints:
-                        primaryKey: true
-                        nullable: false 
-               - column: # category
+        - createTable:
+            tableName: account_label
+            columns:
+              - column:
+                  name: account_label_id
+                  type: INT
+                  autoIncrement: true
+                  startWith: 1001
+                  constraints:
+                      primaryKey: true
+                      nullable: false 
+              - column: # category
                   name: category_id
                   type: INT
                   constraints:
@@ -169,26 +169,26 @@ databaseChangeLog:
                       onDelete: "NO ACTION"
                       onUpdate: "NO ACTION"
                       references: category(category_id)
-               - column:
+              - column:
                   name: account_label
                   type: varchar(2048)
                   constraints:
-                    nullable: false
-
+                      nullable: false
+ 
 
         # Amazon detail
         - createTable:
-             tableName: amazon_detail
-             columns:
-                - column:
-                    name: amazon_detail_id
-                    type: INT
-                    autoIncrement: true
-                    startWith: 1001
-                    constraints:
-                        primaryKey: true
-                        nullable: false
-               - column: # label
+            tableName: amazon_detail
+            columns:
+              - column:
+                  name: amazon_detail_id
+                  type: INT
+                  autoIncrement: true
+                  startWith: 1001
+                  constraints:
+                      primaryKey: true
+                      nullable: false
+              - column: # label
                   name: label_id
                   type: INT
                   constraints:
@@ -197,21 +197,21 @@ databaseChangeLog:
                       onDelete: "NO ACTION"
                       onUpdate: "NO ACTION"
                       references: account_label(account_label_id)
-                - column:
-                    name: detail_date
-                    type: date
-                    constraints:
-                       nullable:false
-                - column:
-                    name: detail_amount
-                    type: currency
-                    constraints:
-                       nullable:false
-                - column:
-                    name: extra_info
-                    type: varchar(1024)
-                    constraints:
-                       nullable:true
+              - column:
+                  name: detail_date
+                  type: date
+                  constraints:
+                      nullable:false
+              - column:
+                  name: detail_amount
+                  type: currency
+                  constraints:
+                      nullable:false
+              - column:
+                  name: extra_info
+                  type: varchar(1024)
+                  constraints:
+                      nullable:true
 
 
  
