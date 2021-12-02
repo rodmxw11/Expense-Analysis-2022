@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # See: https://pdfbox.apache.org/2.0/commandline.html
 
