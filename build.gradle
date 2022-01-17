@@ -1,0 +1,23 @@
+plugins {
+    id 'groovy'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // See: https://pdfbox.apache.org/
+    implementation 'org.apache.pdfbox:pdfbox-tools:2.0.24'
+    implementation 'org.codehaus.groovy:groovy-all:3.0.9'
+}
+
+task runProcessPdfFolder(type: JavaExec) {
+    classpath = sourceSets.main.runtimeClasspath
+
+    mainClass = 'com.rodmxw11.expense.analysis.ProcessPdfFolder'
+
+    // arguments to pass to the application
+    args '2021'
+}

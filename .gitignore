@@ -1,6 +1,8 @@
 data/
 workspace/
 temp/
+build/
+.gradle/
 
 *~
 *#

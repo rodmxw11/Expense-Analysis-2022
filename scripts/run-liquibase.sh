@@ -3,5 +3,5 @@
 liquibase=~/JavaPrograms/liquibase-4.6.1/
 PATH=$liquibase:$PATH
 
-liquibase --defaultsFile=../src/database-config/liquibase.properties $*
+liquibase --defaultsFile=../src/main/resources/database-config/liquibase.properties $*
 
