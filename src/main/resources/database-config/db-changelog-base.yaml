@@ -164,7 +164,7 @@ databaseChangeLog:
                   name: category_id
                   type: INT
                   constraints:
-                      nullable: false
+                      nullable: true           # we can analyze and assign categories after data load
                       foreignKeyName: fk_label_category_id
                       onDelete: "NO ACTION"
                       onUpdate: "NO ACTION"
@@ -188,6 +188,15 @@ databaseChangeLog:
                   constraints:
                       primaryKey: true
                       nullable: false
+              - column: # monthly summary
+                  name: amazon_summary_id
+                  type: INT
+                  constraints:
+                      nullable: false
+                      foreignKeyName: fk_detail_summary_id
+                      onDelete: "NO ACTION"
+                      onUpdate: "NO ACTION"
+                      references: amazon_summary(amazon_summary_id)
               - column: # label
                   name: label_id
                   type: INT
