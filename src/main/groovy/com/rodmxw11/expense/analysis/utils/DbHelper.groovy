@@ -17,5 +17,5 @@ class DbHelper {
     }
 
     Map<String,Integer> label_cache = new HashMap<String,Integer>()
-    int
+   // int
 }
