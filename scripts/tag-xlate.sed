@@ -42,6 +42,7 @@ s/"(APL\*|APPLE\.COM).*"/"apple online:service"/g
 s/"(ATT|AT&T).*"/"at&t:utility"/g
 s/"AUNTIE ANNE.*"/"auntie ann:food"/g
 s/"Audible.*"/"audible:service"/g
+s/"OfferAudible.*"/"audible:service"/g
 s/"BP#.*"/"bp:gas"/g
 s/"BARNES & NOBLE.*"/"barns noble:retail"/g
 s/"AUTOZONE.*"/"autozone:tools"/g
@@ -96,8 +97,10 @@ s/"MCDONALD'S.*"/"mcdonalds:food"/g
 s/"MYEYEDR.*"/"my eye doctor:medical"/g
 s/"MYFITNESSPAL.*"/"my fitness pal:service"/g
 s/"NCDMV.*"/"nc dmv:fee"/g
+s/"PAYIT NC DMV.*"/"nc dmv:fee"/g
 s/"NC QUICK PASS.*"/"nc quick pass:travel"/g
 s/"(NCSU|NC STATE).*"/"nc state:school"/g
+s/"NORTH CAROLINA STATE UNIV.*"/"nc state:school"/g
 s/"NEO-ASIA.*"/"neo asia:food"/g
 s/"(NETFLIX|Netflix)\.com.*"/"netflix:service"/g
 s/"OLIVE GARD.*"/"olive garden:food"/g
@@ -179,6 +182,87 @@ s/"CENGAGE LEA.*"/"cengage learning:school"/g
 s/"CHAMPA.*"/"champa grill:food"/g
 s/"CHARLES MEGLIO.*"/"charles meglio:misc"/g
 s/"CHASE PARK PLAZA.*"/"chase park plaza:travel"/g
+s/"NAMI .*"/"nami:donation"/g
+s/"NATL SOC OF.*"/"national society of lead:misc"/g
+s/"NBS-NCS\*.*"/"nbs-ncs service:misc"/g
+s/"NICKEL POINT.*"/"nickel point brewing:food"/g
+s/"NOODLES \& CO.*"/"noodles & co:food"/g
+s/"NORTHERN TOOL.*"/"northern tool:tools"/g
+s/"OAK PARK POOL.*"/"oak park pool:home"/g
+s/"OFFICEMAX.*"/"office max:retail"/g
+s/"OFFICIAL RECORDS ONLINE.*"/"official records online:service"/g
+s/"OPTIMUM OUTCOMES.*"/"optimum outcomes:misc"/g
+s/"OREILLYMEDIA.*"/"oreilly books:service"/g
+s/"OUR LADY OF LOURDES.*"/"our lady of lourdes:donation"/g
+s/"PADDLE\.NET\* CURSIVE.*"/"cursive intellij plugin:service"/g
+s/"PARADISE INDIAN.*"/"paradise indian cuisine:food"/g
+s/"PARKER'S #.*"/"parker's 54:food"/g
+s/"PATEL BRO.*"/"patel brothers:grocery"/g
+s/"Payment Thank You.*"/"amazon payment:payment"/g
+s/"PAYPAL \*AERCRECYCLI.*"/"aerc recycling:misc"/g
+s/"PAYPAL \*ANCESTRYCOM.*"/"ancestry.com:service"/g
+s/"PAYPAL \*ANTENNAMANL.*"/"antenna man:service"/g
+s/"PAYPAL \*AUTOZONEINC.*"/"autozone:tools"/g
+s/"PAYPAL \*BITWARDEN.*"/"bitwarden:service"/g
+s/"PAYPAL \*BM.*"/"paypal bm:misc"/g
+s/"PAYPAL \*CARFAXINC.*"/"carfax:service"/g
+s/"PAYPAL \*DOMINO'S.*"/"dominos:food"/g
+s/"PAYPAL \*EBAY.*"/"ebay:delivery"/g
+s/"PAYPAL \*ECSTUNING.*"/"ecstuning:tools"/g
+s/"PAYPAL \*FEVER.*"/"paypal fever:misc"/g
+s/"PAYPAL \*FOOD ONLINE CHIN.*"/"chinatown express:food"/g
+s/"PAYPAL \*HOME DEPOT.*"/"home depot:tools"/g
+s/"PAYPAL \*IDPARTS.*"/"idparts:tools"/g
+s/"PAYPAL \*INNOVATEPC.*"/"innova tech:delivery"/g
+s/"PAYPAL \*ISLANDGROCE.*"/"island groceries:delivery"/g
+s/"PAYPAL \*LEANPUB.*"/"leanpub:service"/g
+s/"PAYPAL \*LOWES\.COM.*"/"lowes hardware:tools"/g
+s/"PAYPAL \*MEDIUM\.COM.*"/"medium.com:service"/g
+s/"PAYPAL \*MICROSOFTSTORE.*"/"microsoft store:service"/g
+s/"PAYPAL \*NAMI WAKE.*"/"nami:donation"/g
+s/"PAYPAL \*NY TIMES.*"/"nytimes:service"/g
+s/"PAYPAL \*OAKPARKPOO.*"/"oak park pool:home"/g
+s/"PAYPAL \*ORATOR LLC.*"/"orator llc:service"/g
+s/"PAYPAL \*PADDLE\.COM.*"/"cursive intellij plugin:service"/g
+s/"PAYPAL \*PEARSONEDUC.*"/"pearson education:school"/g
+s/"PAYPAL \*SAFELITE.*"/"safelite glass:tools"/g
+s/"PAYPAL \*SCOOTERSOF.*"/"scooter software:service"/g
+s/"PAYPAL \*TAGCROWDCOM.*"/"tag crowd.com:service"/g
+s/"PAYPAL \*TEQUIPMENT.*"/"te equipment:delivery"/g
+s/"PAYPAL \*VIDAXLLLC.*"/"vidaxl llc:service"/g
+s/"PAYPAL \*VIDAXLLLC.*"/"vidax llc:service"/g
+s/"PAYPAL \*WAYFAIR.*"/"wayfair:delivery"/g
+s/"PAYPAL \*WIKIPEDIA.*"/"wikipedia:donation"/g
+s/"PAYPAL \*ZENNIOPTICL.*"/"zenni optical:delivery"/g
+s/"PEPBOYS.*"/"pepboys:tools"/g
+s/"PERSIS INDIAN.*"/"persis indian grill:food"/g
+s/"PHOENIX LIMITED PARTNERSH.*"/"phoenix partners:misc"/g
+s/"PIGGLY WIGGLY.*"/"piggly wiggly:grocery"/g
+s/"POCKET GETPOCKET.*"/"pocket:service"/g
+s/"PLAYERS RETREAT.*"/"players retreat:misc"/g
+s/"POOLE'S PLUMBING.*"/"pooles plumbing:home"/g
+s/"POPEYES.*"/"popeyes:food"/g
+s/"POPSHELF.*"/"popshelf:retail"/g
+s/"PP\*BRUCELEETEALLC.*"/"bruce lee tea:food"/g
+s/"PP\*WINDSHIELDS.*"/"windshields:tools"/g
+s/"Public Mini Mart.*"/"public minimart:retail"/g
+s/"PURCHASE INTEREST CHARGE.*"/"purchase interest:payment"/g
+s/"QDOBA.*"/"qdoba:food"/g
+s/"PRICELN\*SANDCASTLE.*"/"sandcastle motel:travel"/g
+s/"QT .*"/"qt gas:gas"/g
+s/"RALEIGH ENDO CENTER.*"/"raleigh endo center:medical"/g
+s/"RALEIGH GRAND .*"/"raleigh grand theater:misc"/g
+s/"RALEIGH UTILITY BILL.*"/"raleigh water sewer:utility"/g
+s/"Randys Pizza.*"/"randys pizza:food"/g
+s/"BAR TACO.*"/"bar taco:food"/g
+s/"CHARGRILL.*"/"chargrill:food"/g
+s/CHEDDAR UP PAYMENT.*"/"cheddar up payment:misc"/g
+s/"CHE EMPANADAS.*"/"che empanadas:food"/g
+s/"CHEESECAKE.*"/"cheesecake factory:food"/g
+s/"CHELSEA CAFE.*"/"chelsea cafe:food"/g
+s/"CHHOTES.*"/"chhotes:misc"/g
+s/"CHILI'S.*"/"chilis:food"/g
+s/"CHIMNEYS PLUS.*"/"chimneys plus:home"/g
 
 
 
