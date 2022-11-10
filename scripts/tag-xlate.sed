@@ -16,6 +16,7 @@
 # tax = property tax
 # home = home maintenance
 # donation = giving money away
+# autos = automobile
 
 # misc = non categorized
 
@@ -45,9 +46,9 @@ s/"Audible.*"/"audible:service"/g
 s/"OfferAudible.*"/"audible:service"/g
 s/"BP#.*"/"bp:gas"/g
 s/"BARNES & NOBLE.*"/"barns noble:retail"/g
-s/"AUTOZONE.*"/"autozone:tools"/g
+s/"AUTOZONE.*"/"autozone:autos"/g
 s/"BEST BUY.*"/"best buy:retail"/g
-s/"(BRUEGGERS|SQ *BRUEGGER'S BAGELS).*"/"breuggers:food"/g
+s/"(BRUEGGERS|SQ *BRUEGGER'S BAGELS).*"/"breuggers bagels:food"/g
 s/"BOJANGLES.*"/"bojangles:food"/g
 s/"CHICK\-FIL\-A.*"/"chick-fil-a:food"/g
 s/"(CHINA ?TOWN|FOOD AT CHINA EXPRESS|BM CHINATOWN EXPRESS).*"/"chinatown express:food"/g
@@ -96,13 +97,13 @@ s/"(MACYS|MACY'S).*"/"macy's:retail"/g
 s/"MCDONALD'S.*"/"mcdonalds:food"/g
 s/"MYEYEDR.*"/"my eye doctor:medical"/g
 s/"MYFITNESSPAL.*"/"my fitness pal:service"/g
-s/"NCDMV.*"/"nc dmv:fee"/g
-s/"PAYIT NC DMV.*"/"nc dmv:fee"/g
+s/"NCDMV.*"/"nc dmv:autos"/g
+s/"PAYIT NC DMV.*"/"nc dmv:autos"/g
 s/"NC QUICK PASS.*"/"nc quick pass:travel"/g
 s/"(NCSU|NC STATE).*"/"nc state:school"/g
 s/"NORTH CAROLINA STATE UNIV.*"/"nc state:school"/g
 s/"NEO-ASIA.*"/"neo asia:food"/g
-s/"(NETFLIX|Netflix)\.com.*"/"netflix:service"/g
+s/"netflix.com.*"/"netflix:service"/gi
 s/"OLIVE GARD.*"/"olive garden:food"/g
 s/"OMALLEYS.*"/"omalleys:food"/g
 s/"PACIFIC BEACHWEAR.*"/"pacific beachwear:retail"/g
@@ -151,13 +152,13 @@ s/"WEIGHTWATCHERS.*"/"weight watchers:service"/g
 s/"WENDYS .*"/"wendys:food"/g
 
 s/"54TH STREET.*"/"54th street:food"/g
-s/"ADVANCE AUTO.*"/"advance auto:tools"/g
+s/"ADVANCE AUTO.*"/"advance auto:autos"/g
 s/"ADY\*Jetbrains.*"/"jetbrains:service"/g
 s/"AIRBNB.*"/"airbnb:travel"/g
 s/"AJISAI.*"/"ajisai:food"/g
 s/"Angie's List.*"/"angie's list:service"/g
 s/"AMZ\*Wikimedia.*"/"wikipedia:donation"/g
-s/"AMZ*034Motorsport.*"/"motorsport store:toools"/g
+s/"AMZ*034Motorsport.*"/"motorsport store:autos"/g
 s/"ANIME PARA.*"/"anime paradaisu:retail"/g
 s/"ANKIAPP.*"/"anki app:service"/g
 s/"BADD KITTY.*"/"badd kitty:retail"/g
@@ -176,7 +177,7 @@ s/"BUFFALO BRO.*"/"buffalo brothers:food"/g
 s/"BULL CITY BURGER.*"/"bull city burger:food"/g
 s/"BULL CITY FINA.*"/"bull city financial:medical"/g
 s/"CAREMARK.*"/"caremark pharmacy:medical"/g
-s/"CARQUEST.*"/"carquest:tools"/g
+s/"CARQUEST.*"/"carquest:autos"/g
 s/"CASA CARBON.*"/"casa carbone:food"/g
 s/"CENGAGE LEA.*"/"cengage learning:school"/g
 s/"CHAMPA.*"/"champa grill:food"/g
@@ -202,17 +203,17 @@ s/"Payment Thank You.*"/"amazon payment:payment"/g
 s/"PAYPAL \*AERCRECYCLI.*"/"aerc recycling:misc"/g
 s/"PAYPAL \*ANCESTRYCOM.*"/"ancestry.com:service"/g
 s/"PAYPAL \*ANTENNAMANL.*"/"antenna man:service"/g
-s/"PAYPAL \*AUTOZONEINC.*"/"autozone:tools"/g
+s/"PAYPAL \*AUTOZONEINC.*"/"autozone:autos"/g
 s/"PAYPAL \*BITWARDEN.*"/"bitwarden:service"/g
 s/"PAYPAL \*BM.*"/"paypal bm:misc"/g
-s/"PAYPAL \*CARFAXINC.*"/"carfax:service"/g
+s/"PAYPAL \*CARFAXINC.*"/"carfax:autos"/g
 s/"PAYPAL \*DOMINO'S.*"/"dominos:food"/g
 s/"PAYPAL \*EBAY.*"/"ebay:delivery"/g
-s/"PAYPAL \*ECSTUNING.*"/"ecstuning:tools"/g
+s/"PAYPAL \*ECSTUNING.*"/"ecstuning:autos"/g
 s/"PAYPAL \*FEVER.*"/"paypal fever:misc"/g
 s/"PAYPAL \*FOOD ONLINE CHIN.*"/"chinatown express:food"/g
 s/"PAYPAL \*HOME DEPOT.*"/"home depot:tools"/g
-s/"PAYPAL \*IDPARTS.*"/"idparts:tools"/g
+s/"PAYPAL \*IDPARTS.*"/"idparts:autos"/g
 s/"PAYPAL \*INNOVATEPC.*"/"innova tech:delivery"/g
 s/"PAYPAL \*ISLANDGROCE.*"/"island groceries:delivery"/g
 s/"PAYPAL \*LEANPUB.*"/"leanpub:service"/g
@@ -225,7 +226,7 @@ s/"PAYPAL \*OAKPARKPOO.*"/"oak park pool:home"/g
 s/"PAYPAL \*ORATOR LLC.*"/"orator llc:service"/g
 s/"PAYPAL \*PADDLE\.COM.*"/"cursive intellij plugin:service"/g
 s/"PAYPAL \*PEARSONEDUC.*"/"pearson education:school"/g
-s/"PAYPAL \*SAFELITE.*"/"safelite glass:tools"/g
+s/"PAYPAL \*SAFELITE.*"/"safelite glass:autos"/g
 s/"PAYPAL \*SCOOTERSOF.*"/"scooter software:service"/g
 s/"PAYPAL \*TAGCROWDCOM.*"/"tag crowd.com:service"/g
 s/"PAYPAL \*TEQUIPMENT.*"/"te equipment:delivery"/g
@@ -233,8 +234,8 @@ s/"PAYPAL \*VIDAXLLLC.*"/"vidaxl llc:service"/g
 s/"PAYPAL \*VIDAXLLLC.*"/"vidax llc:service"/g
 s/"PAYPAL \*WAYFAIR.*"/"wayfair:delivery"/g
 s/"PAYPAL \*WIKIPEDIA.*"/"wikipedia:donation"/g
-s/"PAYPAL \*ZENNIOPTICL.*"/"zenni optical:delivery"/g
-s/"PEPBOYS.*"/"pepboys:tools"/g
+s/"PAYPAL \*ZENNIOPTICL.*"/"zenni optical:medical"/g
+s/"PEPBOYS.*"/"pepboys:autos"/g
 s/"PERSIS INDIAN.*"/"persis indian grill:food"/g
 s/"PHOENIX LIMITED PARTNERSH.*"/"phoenix partners:misc"/g
 s/"PIGGLY WIGGLY.*"/"piggly wiggly:grocery"/g
@@ -244,11 +245,11 @@ s/"POOLE'S PLUMBING.*"/"pooles plumbing:home"/g
 s/"POPEYES.*"/"popeyes:food"/g
 s/"POPSHELF.*"/"popshelf:retail"/g
 s/"PP\*BRUCELEETEALLC.*"/"bruce lee tea:food"/g
-s/"PP\*WINDSHIELDS.*"/"windshields:tools"/g
+s/"PP\*WINDSHIELDS.*"/"windshields:autos"/g
 s/"Public Mini Mart.*"/"public minimart:retail"/g
 s/"PURCHASE INTEREST CHARGE.*"/"purchase interest:payment"/g
 s/"QDOBA.*"/"qdoba:food"/g
-s/"PRICELN\*SANDCASTLE.*"/"sandcastle motel:travel"/g
+s/"PRICELN\*SANDCASTLE.*"/"sand castle resort:travel"/g
 s/"QT .*"/"qt gas:gas"/g
 s/"RALEIGH ENDO CENTER.*"/"raleigh endo center:medical"/g
 s/"RALEIGH GRAND .*"/"raleigh grand theater:misc"/g
@@ -263,6 +264,195 @@ s/"CHELSEA CAFE.*"/"chelsea cafe:food"/g
 s/"CHHOTES.*"/"chhotes:misc"/g
 s/"CHILI'S.*"/"chilis:food"/g
 s/"CHIMNEYS PLUS.*"/"chimneys plus:home"/g
+s/"CITY OF CHARLOTTE CDOT.*"/"charlotte parking:travel"/g
+s/"CITYOFSTLOUIS\-PARKING.*"/"st louis parking:travel"/g
+s/"CLAIRE'S.*"/"clairs:retail"/g
+s/"CLASSIC PERFORMANCE AUTO.*"/"classic performance auto:autos"/g
+s/"CLASS OF SENIOR DUES.*"/"senior dues:school"/g
+s/"CNTY\/YLLW CAB.*"/"stl yellow cab:travel"/g
+s/"COLLEGEBOARD\*PROFIL.*"/"college boards:school"/g
+s/"CPR EDUCATORS.*"/"cpr educators:school"/g
+s/"CREATION ENGINE INC.*"/"creation engine:service"/g
+s/"CRISP SALAD .*"/"crisp salad:food"/g
+s/"DICKEYS.*"/"dickeys:food"/g
+s/"DICK'S SPORTING.*"/"dick's sporting:retail"/g
+s/"DILLARD'S .*"/"dillards:retail"/g
+s/"DINING MICROS.*"/"dining micros:food"/g
+s/"DMV VEHICLE.*"/"nc dmv:autos"/g
+s/"DOLLAR GENERAL.*"/"dollar general:retail"/g
+s/"DOLLAR RENT A CAR.*"/"dollar rent a car:travel"/g
+s/"D\-Triangle Vision.*"/"triangle vision:medical"/g
+s/"DUCK DONUTS.*"/"duck donuts:food"/g
+s/"EAGLES.*"/"eagles:misc"/g
+s/"EAUTOREPAIR\.NET.*"/"eauto repair:autos"/g
+s/"ECA 11.*"/"eca 11:misc"/g
+s/"EZ WAY.*"/"ez way:misc"/g
+s/"FAS MART.*"/"fas mart:gas"/g
+s/"FASTMED URGENT.*"/"fast med urgent care:medical"/g
+s/"FIRSTPOINT BD.*"/"firstpoint bd:misc"/g
+s/"FIRST WATCH.*"/"first watch:food"/g
+s/"FITNESS YOUR WAY.*"/"fitness your way:service"/g
+s/"FLOORING ACCESSORY.*"/"flooring accessory:home"/g
+s/"FRED ANDERSON NISSAN.*"/"fred anderson nissan:autos"/g
+s/"FSI\*PSNC.*"/"psnc:utility"/g
+s/"GATEWAY ARCH.*"/"gateway arch:travel"/g
+s/"GCF.*"/"goodwill:retail"/g
+s/"GINOS PIZZA.*"/"ginos pizza:food"/g
+s/"GOV\*NC DMV.*"/"nc dmv:autos"/g
+s/"GWU MUSEUM AND.*"/"george washington univ:travel"/g
+s/"HABITAT FOR HUMANITY.*"/"habitat for humanity:retail"/g
+s/"HELICOPTER SOL.*"/"helicopter solutions:travel"/g
+s/"HIBACHI.*"/"hibachi grill:food"/g
+s/"HOT TOPIC.*"/"hot topic myrtle beach:travel"/g
+s/"HOLYLAND OLIVE.*"/"holyland olive wood:retail"/g
+s/"HUDSONNEWS.*"/"hudson news:retail"/g
+s/"IDPARTS.*"/"idparts:autos"/g
+s/"IKEA ST LOUIS.*"/"ikea restaurant:food"/g
+s/"I LOVE NY PIZZA.*"/"i love ny pizza:food"/g
+s/"INTEREST CHARGE REVERSAL.*"/"interest charge reversal:payment"/g
+s/"INTREX COMPUTERS.*"/"intrex computers:retail"/g
+s/"JCPENNEY.*"/"jc penney:retail"/g
+s/"JetBrains.*"/"jetbrains:service"/g
+s/"JH ONLINE BILLING.*"/"jh online medical billing:medical"/g
+s/"JIFFY LUBE.*"/"jiffy lube:autos"/g
+s/"JOSE AND SONS.*"/"jose and sons:food"/g
+s/"J Z WANG PSYCH.*"/"j z wang psychiatry:medical"/g
+s/"KADHAI.*"/"kadhai indian:food"/g
+s/"K DISCOUNT BEAUTY.*"/"k discount beauty:retail"/g
+s/"KILWINS.*"/"kilwins:misc"/g
+s/"KOHL'S.*"/"kohl's:retail"/g
+s/"KROGER.*"/"kroger:grocery"/g
+s/"KRUEGER SYSTEMS ICIRCUITA.*"/"icircuit:service"/g
+s/"LEITH TOYOTA.*"/"leith toyota:autos"/g
+s/"LEITH VW.*"/"leith vw:autos"/g
+s/"LEMON SQUAD.*"/"lemon squad inspections:autos"/g
+s/"LEMONS WRECKER.*"/"lemons wrecker:autos"/g
+s/"LG CNS.*"/"lg cns:misc"/g
+s/"LGBS ERC TOLLS.*"/"erc tolls:travel"/g
+s/"LIDL.*"/"lidl:grocery"/g
+s/"LIGHT YEARS.*"/"light years:retail"/g
+s/"LOCALS SEAFOOD.*"/"locals seafood:food"/g
+s/"LOGMEIN\*LastPass.*"/"lastpass:service"/g
+s/"LYNNWOOD GRILL.*"/"lynnwood grill:food"/g
+s/"MAMA MIA PIZZ.*"/"mama mia pizza:food"/g
+s/"MANNING.*"/"mannng books:service"/g
+s/"MAPLESOFT.*"/"maplesoft:service"/g
+s/"MCKENZIE MRKTS.*"/"mckenzie markets:food"/g
+s/"MCLAURIN PARKING.*"/"mclaurin parking:travel"/g
+s/"MED\*RALEIGH ENDO.*"/"raleigh endo center:medical"/g
+s/"MENCHIE`S FROZEN.*"/"menchie's frozen yogurt:food"/g
+s/"MINUTEKEY.*"/"minute key dup:home"/g
+s/"MO BOT GDN.*"/"missouri butterfly museum:travel"/g
+s/"PAYPAL \*CARID.COM.*"/"carid.com:autos"/g
+s/"PAYPAL \*VLADSCH.COM.*"/"vladsh.com:misc"/g
+s/"PETCO.*"/"petco:retail"/g
+s/"RALEIGH PARKING METERS.*"/"raleigh parking:travel"/g
+s/"RDUAA PUBLIC.*"/"rdu parking:travel"/g
+s/"RETINA ASSOC.*"/"retina associates:medical"/g
+s/"REVCO SOLUTION.*"/"revco solutions:medical"/g
+s/"REVELRY.*"/"revelry:misc"/g
+s/"REX HOSPITAL.*"/"rex hospital:medical"/g
+s/"ROSES.*"/"roses:misc"/g
+s/"ROYAL CHIN.*"/"royal chinese buffet:food"/g
+s/"RPS TALLA.*"/"rps tallahassee:travel"/g
+s/"Safari Books.*"/"safari online:service"/g
+s/"SAFE LIGHT.*"/"safe light:autos"/g
+s/"SAINT LOUIS ZOO.*"/"st louis zoo:travel"/g
+s/"SANDCASTL.*"/"sand castle resort:travel"/g
+s/"SAUCECON ONLINE.*"/"saucecon conference:service"/g
+s/"SEOUL GARDEN.*"/"seoul garden:food"/g
+s/"SHABASHABU.*"/"shabashabu:food"/g
+s/"SLEEPMED.*"/"sleepmed:medical"/g
+s/"SMARTSTYLE.*"/"smartstyle:retail"/g
+s/"SOFTPLAN.*"/"soft plan:service"/g
+s/"SOHO STEAK.*"/"soho steak:food"/g
+s/"SOPHIAMSACH.*"/"butterfly museum:travel"/g
+s/"SPEEDWAY.*"/"speedway gas:gas"/g
+s/"SP \* MONUMENT GRILLS.*"/"monument grills:delivery"/g
+s/"SQ \*266 PELICAN'S SNOBALL.*"/"pelican snoball:food"/g
+s/"SQ \*ARCH CAFE.*"/"arch cafe nyc:food"/g
+s/"SQ \*AROMA KOREA.*"/"aroma korean:food"/g
+s/"SQ \*BAZIL INDIAN.*"/"bazil indian cuisine:food"/g
+s/"SQ \*BROADWAY AT THE BEACH.*"/"broadway myrtle beach:travel"/g
+s/"SQ \*BRUEGGER'S BAGELS.*"/"breuggers bagels:food"/g
+s/"SQ \*CUSTOM STATION.*"/"custom station myrtle beach:travel"/g
+s/"SQ \*GROOVY DUCK BAKERY.*"/"groovy duck bakery:food"/g
+s/"SQ \*GUSSY'S PLACE.*"/"gussy's place:food"/g
+s/"SQ \*HOLLYWOOD HEROES.*"/"hollywood heroes:food"/g
+s/"SQ \*RALEIGH - VAN GOGH.*"/"van gogh exhibit:misc"/g
+s/"SQ \*THAI BISTRO.*"/"thai bistro:food"/g
+s/"SQ \*TRIANGLE RECONSTRUCTI.*"/"triangle reconstruction:home"/g
+s/"SSM HEALTH SLUH PARKING.*"/"ssm hospital parking:travel"/g
+s/"STATE FARM INSURANCE.*"/"state farm insurance:autos"/g
+s/"ST\. LOUIS AIRPORT TAXI.*"/"st louis airport taxi:travel"/g
+s/"STRAUB'S.*"/"straubs:grocery"/g
+s/"SUGAR LIFE.*"/"sugar life myrtle beach:travel"/g
+s/"SWERVEPAY LLC.*"/"swervepay:travel"/g
+s/"TABLOTV\.COM.*"/"tablo tv:service"/g
+s/"TASU ASIAN BISTRO.*"/"tasu asian bistro:food"/g
+s/"TAXI TAXI.*"/"taxi taxi restaurant:food"/g
+s/"T&C.*"/"t&c:misc"/g
+s/"TELADOC.*"/"teladoc:medical"/g
+s/"TGI FRIDAY.*"/"tgif friday's:food"/g
+s/"THE CRAB HOUSE.*"/"crab house:food"/g
+s/"THE FOUNDATION OF HOPE.*"/"foundation of hope:donation"/g
+s/"THE GIANT CRAB.*"/"giant crab:food"/g
+s/"THE MELTING POT.*"/"melting pot:food"/g
+s/"THE UPS STORE.*"/"ups store:misc"/g
+s/"TORRID.*"/"torrid:misc"/g
+s/"TRADER JOE.*"/"trader joe's:grocery"/g
+s/"Triangle Transit.*"/"triangle transit:travel"/g
+s/"T\-SHIRT CONNECT.*"/"t-shirt connection:travel"/g
+s/"TST\* BulBox.*"/"bulbox:food"/g
+s/"TST\* CHAN.*"/"chan:food"/g
+s/"TST\* Dank Burrito.*"/"dank burrito:food"/g
+s/"TST\* SPICY 9.*"/"spicy 9:food"/g
+s/"TST\* THE MELTING POT.*"/"melting pot:food"/g
+s/"TST\* WOODY S SPORTS.*"/"woody's sports tavern:food"/g
+s/"TTP\*TAUNTONPUBLISHER.*"/"taunton press:service"/g
+s/"TVY\*FITNESSYOURWAY.*"/"fitness your way:service"/g
+s/"UDAY REEBYE MD.*"/"dr uday reebye:medical"/g
+s/"UNC CH EXERCISE.*"/"unc exercise:medical"/g
+s/"UNC CH PERFORMING.*"/"unc performing arts:school"/g
+s/"USA\*CANTEEN VENDING.*"/"canteen vending:food"/g
+s/"VIVA MEXICAN KITCHEN.*"/"viva mexican kitchen:food"/g
+s/"Volkswagen AG.*"/"vw:autos"/g
+s/"WAKE COUNTY REVENUE DEPT.*"/"wake co revenue:taxes"/g
+s/"WAKEMEDIC AUBONPAIN.*"/"au bon pain:food"/g
+s/"WAL-MART CHECK PRINTNG.*"/"walmart check printing:misc"/g
+s/"WASHINGTON PASSPORT.*"/"washington passport office:misc"/g
+s/"WAWA.*"/"wawa gas:gas"/g
+s/"WC REGISTER OF DEEDS.*"/"wake co registry of deeds:misc"/g
+s/"WEGMANS.*"/"wegmans:grocery"/g
+s/"WHALES.*"/"whales myrtle beach:travel"/g
+s/"WINDY HILL ABC.*"/"abc liquors:retail"/g
+s/"WOK N GRILL.*"/"wok n grill:food"/g
+s/"WWW\.CAREMARK\.COM.*"/"caremark card:medical"/g
+s/"WWWKERMATDI.*"/"kerma tdi:autos"/g
+s/"YARD HOUSE.*"/"yard house:food"/g
+s/"YOU TURN.*"/"you turn:misc"/g
+s/"ZENNI OPTICAL.*"/"zenni optical:medical"/g
+s/"ZWELIS.*"/"zwelis:food"/g
+s/"AMZ\*034Motorsport De.*"/"034 motorsport:autos"/g
+s/"SN \*Super 32 Challenge.*"/"super 32 challenge:misc"/g
+s/"ULTA.*"/"ulta beauty:retail"/g
+s/"WAKE RADIOLOGY CONSULTAN.*"/"wake radiology:medical"/g
+s/"WHOLEFDS.*"/"whole foods:grocery"/g
+s/"WWW\.TABLOTV\.COM.*"/"tablo tv:service"/g
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
