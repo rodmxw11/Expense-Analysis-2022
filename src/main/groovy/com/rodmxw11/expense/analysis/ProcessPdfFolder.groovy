@@ -139,44 +139,49 @@ class ProcessPdfFolder {
         } //end eacheFile
     }
 
-    static void main(String[] args) {
-        assert args.length>0, "Usage: groovy process-pdf-folder.groovy <year>"
-        String year = args[0]
-        assert year!=null, "year cannot be null"
+    static Map<String,String> getProperties() {
+        String props_file = 'src/main/resources/application.properties'
+        Properties props = new Properties()
+        props.load(new File(props_file).newInputStream())
+        return props as Map<String,String>
+    }
 
-        File amazon_folder = new File('./data/Amazon-Card')
-        assert amazon_folder.exists()
+    static void processOneYear(File pdfFolder, String year, File csvFolder) {
+        assert pdfFolder.exists() && pdfFolder.directory,"ERROR: PDF folder does not exist: ${pdfFolder.absolutePath}"
+        File year_folder = new File(pdfFolder, year)
+        assert year_folder.exists() && year_folder.directory, "ERROR: year folder does not exist: ${year_folder.absolutePath}"
 
-        File year_folder = new File(amazon_folder, year)
-        assert year_folder.exists(),"ERROR: year folder does not exist: ${year_folder.absolutePath}"
-
-        File output_folder = new File('./temp/text-OUT')
-        output_folder.mkdir()
-        assert output_folder.exists()
-
-        File summary_file = new File(output_folder, "${year}-summary.csv")
+        if (csvFolder.exists()) {
+            assert csvFolder.directory
+        } else {
+            csvFolder.mkdir()
+        }
+        assert csvFolder.exists() && csvFolder.directory
+        File summary_file = new File(csvFolder, "${year}-summary.csv")
         summary_file.text = summary_headers
 
         process_year_folder(
                 year_folder,
                 year,
-                output_folder,
+                csvFolder,
                 summary_file
         )
     }
+
+    static void main(String[] args) {
+//        assert args.length>0, "Usage: groovy process-pdf-folder.groovy <year>"
+//        String year = args[0]
+//        assert year!=null, "year cannot be null"
+
+        Map<String, String> props = getProperties()
+        println props
+        //System.exit(0)
+        File pdfFolder = new File(props['amazon.pdf.year.folder'])
+        File csvFolder = new File(props['amazon.csv.year.folder'])
+        String[] years = props['amazon.years'].split(',')
+        years.each {
+            year ->
+            processOneYear(pdfFolder, year, csvFolder)
+        }
+    }
 } //endclass
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

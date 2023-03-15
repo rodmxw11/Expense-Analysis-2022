@@ -19,9 +19,6 @@ task runProcessPdfFolder(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
 
     mainClass = 'com.rodmxw11.expense.analysis.ProcessPdfFolder'
-
-    // arguments to pass to the application
-    args '2022'
 }
 
 task csvProcess(type: JavaExec) {
