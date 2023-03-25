@@ -1,4 +1,5 @@
 plugins {
+    id 'java'
     id 'groovy'
     id 'application'
 }
@@ -7,12 +8,19 @@ repositories {
     mavenCentral()
 }
 
+sourceCompatibility = '11'
+
 dependencies {
     // See: https://pdfbox.apache.org/
     implementation 'org.apache.pdfbox:pdfbox-tools:2.0.24'
     implementation 'org.codehaus.groovy:groovy-all:3.0.9'
     implementation 'com.xlson.groovycsv:groovycsv:1.3'
     implementation 'com.h2database:h2:2.1.210'
+    testImplementation 'org.codehaus.groovy:groovy-all:3.0.9'
+    testImplementation  'org.spockframework:spock-core:2.3-groovy-3.0'
+}
+test {
+    useJUnitPlatform()
 }
 
 task runProcessPdfFolder(type: JavaExec) {

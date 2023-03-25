@@ -8,7 +8,15 @@ import groovy.transform.CompileStatic
 @CompileStatic
 class ProcessPdfFolder {
     // 10/23  PANDORA*INTERNET RADIO PDORA.COM/BIL CA 58.87
-    static final Pattern line_item_pattern =   ~/(?m)^(\d+\/\d+)\s+(.+?)\s+([\$\+\-,\d]*\.\d\d)$\n(^(?!\d+\/\d+).*?$)?/
+    static final String LINE_ITEM_PATTERN_REGEX = '''(?mx)
+       ^(\\d+\\/\\d+) # line starts with dd/dd
+       \\s+  # followed by required space
+       (.+?)\\s+ # all chars up to spaces before ...
+       ([\\$\\+\\-,\\d]*\\.\\d\\d)$ # line ends with numeric data ...  [$+-\\d]*.dd
+       \\r?\\n # examine next line ...
+       (^(?!\\d+\\/\\d+).*?$)?  # optional next line that does not begin with mm/dd pattern
+       '''
+    static final Pattern line_item_pattern =   Pattern.compile(LINE_ITEM_PATTERN_REGEX)
 
     // ----------------------- capture other info:
 //Previous Balance $5,016.87
@@ -25,37 +33,67 @@ class ProcessPdfFolder {
     static final String summary_row = '%s,%s,%s'+(',"%s"'*8)+'\n'
     static final Pattern open_close_dates = ~/Opening\/Closing Date\s+([\d\/]+)\s+-\s+([\d\/]+)/
 
+    static String fmt_date(String year, String date) {
+        assert date ==~ /\d\d[-\/]\d\d/
+        return year+ '-' + date.replace('/','-')
+    }
 
     static String fmt_dollars(String text) {
         return text?text.replaceAll(',','').replaceAll(/\$/,'').replaceAll(/\+/,''):''
     }
 
     static String fmt_text(String text) {
-        return text?text.replaceAll(/\s+/,' ').replaceAll('"',"'"):''
+        return text?text.trim().replaceAll(/\s+/,' ').replaceAll('"',"'"):''
     }
 
-    static final String CSV_ROW_FORMAT = '%s,%d,%s/%s,"%s","%s","%s"\n'
-    static String process_line_items(String file_name, String file_text, String year) {
-        StringBuilder buf = new StringBuilder()
-        int line_nbr=1
+    static List<List<String>> parse_line_items(String file_text) {
+        List<List<String>> lines = new ArrayList()
         file_text.eachMatch(line_item_pattern) {
             String full_match, String date, String description, String amount, String xtra
                 ->
-                if (xtra =~ /(?i)^(Total|PAYMENTS)/) {
+                if (xtra==null || xtra =~ /(?i)^(Total|PAYMENTS)/) {
                     xtra = ''
                 }
-                String csv_row = String.format(
-                        CSV_ROW_FORMAT,
+
+                lines << [date,description,amount,xtra]
+        }
+        return lines
+    }
+
+    static final String CSV_ROW_FORMAT = '"%s","%s","%s","%s"'
+    static String format_csv_row(List<String> items, String year) {
+        def (
+           String date,
+           String description,
+           String amount,
+           String xtra
+        ) = [items[0], items[1], items[2], items[3]]
+
+        String csv_row = String.format(
+                CSV_ROW_FORMAT,
+                fmt_date(year, date),
+                fmt_text(description),
+                fmt_dollars(amount),
+                fmt_text(xtra)
+        )
+        return csv_row
+    }
+
+
+    static String process_line_items(String file_name, String file_text, String year) {
+        StringBuilder buf = new StringBuilder()
+        List<List<String>> lines = parse_line_items(file_text)
+        lines.eachWithIndex {
+            List<String> items, int line_nbr
+            ->
+                buf << String.format(
+                        '"%s",%d,%s\n',
                         file_name,
-                        line_nbr++,
-                        date,
-                        year,
-                        fmt_text(description),
-                        fmt_dollars(amount),
-                        fmt_text(xtra)
+                        line_nbr+1,
+                        format_csv_row(items, year)
                 )
-                buf << csv_row
-        } //endeachMatch
+        }
+
         return buf.toString()
     }
 
@@ -103,34 +141,46 @@ class ProcessPdfFolder {
         ByteArrayOutputStream baos = new ByteArrayOutputStream()
         PrintStream ps = new PrintStream(baos)
 
-        // Tell Java to use your special stream
-        System.out = ps
+        try {
+            // Tell Java to use your special stream
+            System.out = ps
 
-        ExtractText.main(
-                [
-                        '-console',
-                        pdf_file.absolutePath
-                ] as String[]
-        )
+            ExtractText.main(
+                    [
+                            '-console',
+                            pdf_file.absolutePath
+                    ] as String[]
+            )
 
-        System.out.flush()
-        System.out = old
-        ps.close()
+            System.out.flush()
+        } finally {
+            System.out = old
+            ps.close()
+        }
 
         return baos.toString()
     }
 
-    static void process_year_folder(File year_folder, String year, File output_folder, File summary_file) {
+    static void process_year_folder(
+            File year_folder,
+            String year,
+            File output_folder,
+            File summary_file
+    ) {
         year_folder.eachFile {
             File pdf_file
                 ->
+                // only want to process .pdf files in this folder
                 if (!pdf_file.name.endsWith('.pdf')) {
                     return
                 }
                 String file_name = pdf_file.name - '-.pdf'
 
                 println "Processing $year/${file_name}..."
+
+                // read in string extracts from PDF file
                 String file_text  = process_pdf( pdf_file )
+                println "......................\n\n$file_text\n\n"
 
                 File output_file = new File(output_folder, "${file_name}.csv")
                 output_file.text = process_line_items(file_name, file_text, year)
@@ -157,6 +207,7 @@ class ProcessPdfFolder {
             csvFolder.mkdir()
         }
         assert csvFolder.exists() && csvFolder.directory
+
         File summary_file = new File(csvFolder, "${year}-summary.csv")
         summary_file.text = summary_headers
 
