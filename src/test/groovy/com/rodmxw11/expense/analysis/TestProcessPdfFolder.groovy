@@ -2,7 +2,6 @@ package com.rodmxw11.expense.analysis
 
 import spock.lang.*
 import static com.rodmxw11.expense.analysis.ProcessPdfFolder.*
-import static com.rodmxw11.expense.analysis.ProcessPdfFolder.line_item_pattern
 
 class TestProcessPdfFolder extends Specification {
     def "line_item_pattern regex simple matches"() {

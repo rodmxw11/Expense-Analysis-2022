@@ -48,7 +48,7 @@ s/"BP#.*"/"bp:gas"/g
 s/"BARNES & NOBLE.*"/"barns noble:retail"/g
 s/"AUTOZONE.*"/"autozone:autos"/g
 s/"BEST BUY.*"/"best buy:retail"/g
-s/"(BRUEGGERS|SQ *BRUEGGER'S BAGELS).*"/"breuggers bagels:food"/g
+s/"(BRUEGGERS|SQ \*BRUEGGER'S BAGELS).*"/"breuggers bagels:food"/g
 s/"BOJANGLES.*"/"bojangles:food"/g
 s/"CHICK\-FIL\-A.*"/"chick-fil-a:food"/g
 s/"(CHINA ?TOWN|FOOD AT CHINA EXPRESS|BM CHINATOWN EXPRESS).*"/"chinatown express:food"/g
