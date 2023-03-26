@@ -33,6 +33,9 @@ class ProcessPdfFolder {
     static final String summary_row = '%s,%s,%s'+(',"%s"'*8)+'\n'
     static final Pattern open_close_dates = ~/Opening\/Closing Date\s+([\d\/]+)\s+-\s+([\d\/]+)/
 
+    static final String tags_xlate_sed_path = 'scripts/tag-xlate.sed'
+    static final ClassifyCsvRow tags_xlate_matcher = new ClassifyCsvRow(new File(tags_xlate_sed_path))
+
     static String fmt_date(String year, String date) {
         assert date ==~ /\d\d[-\/]\d\d/
         return year+ '-' + date.replace('/','-')
@@ -60,7 +63,7 @@ class ProcessPdfFolder {
         return lines
     }
 
-    static final String CSV_ROW_FORMAT = '"%s","%s","%s","%s"'
+    static final String CSV_ROW_FORMAT = '"%s","%s","%s","%s","%s","%s"'
     static String format_csv_row(List<String> items, String year) {
         def (
            String date,
@@ -69,12 +72,20 @@ class ProcessPdfFolder {
            String xtra
         ) = [items[0], items[1], items[2], items[3]]
 
+        def strings = tags_xlate_matcher.lookupTags(description)
+        def (
+           String tag1,
+           String tag2
+        ) = [strings[0], strings[1]]
+
         String csv_row = String.format(
                 CSV_ROW_FORMAT,
                 fmt_date(year, date),
                 fmt_text(description),
                 fmt_dollars(amount),
-                fmt_text(xtra)
+                fmt_text(xtra),
+                tag1,
+                tag2
         )
         return csv_row
     }
@@ -180,7 +191,7 @@ class ProcessPdfFolder {
 
                 // read in string extracts from PDF file
                 String file_text  = process_pdf( pdf_file )
-                println "......................\n\n$file_text\n\n"
+                // DEBUG println "......................\n\n$file_text\n\n"
 
                 File output_file = new File(output_folder, "${file_name}.csv")
                 output_file.text = process_line_items(file_name, file_text, year)

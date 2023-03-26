@@ -57,7 +57,7 @@ s/"(CINEMARK|CNK\*CINEMARK\.COM).*"/"cinemark:retail"/g
 s/"CITY OF RALEIGH.*"/"raliegh water sewer:utility"/g
 s/"(CONSUMERREPORTS|CONSUMERRPRTS|CR \*CONSUM|CR DIGITAL M).*"/"consumer reports:service"/g
 s/"COOK OUT.*"/"cook out:food"/g
-s/"CVS\/PHARMACY.*"/"cvs pharmach:medical"/g
+s/"CVS\/PHARMACY.*"/"cvs pharmacy:medical"/g
 s/"DD DOORDASH.*"/"doordash:food"/g
 s/"(Daylight Donuts|DAYLIGHT DONUTS).*"/"dunkin donuts:food"/g
 s/"DENTAL ARTS.*"/"dental arts:medical"/g
@@ -142,6 +142,7 @@ s/"(TRACKWRESTLING|WRESTLEREG\.COM|AAU MEMBERSHIPS).*"/"track wrestling:service"
 s/"TRIANGLE (DENTAL|IMPLANT).*"/"triangle dental:medical"/g
 s/"UBER EATS.*"/"uber eats:food"/g
 s/"UBER\*? (\*TRIP|TRIP|TECH).*"/"uber rides:travel"/g
+s/"UBER TRIP.*"/"uber rides:travel"/g
 s/"UberBV.*"/"uber rides:travel"/g
 s/"U.HAUL.*"/"u-haul:home"/g
 s/"USPS.*"/"us post office:misc"/g
@@ -150,7 +151,6 @@ s/"WALGREENS.*"/"walgreens:retail"/g
 s/"(WAL-MART #|WALMART\.COM|WM SUPERCENTER).*"/"wal-mart:retail"/g
 s/"WEIGHTWATCHERS.*"/"weight watchers:service"/g
 s/"WENDYS .*"/"wendys:food"/g
-
 s/"54TH STREET.*"/"54th street:food"/g
 s/"ADVANCE AUTO.*"/"advance auto:autos"/g
 s/"ADY\*Jetbrains.*"/"jetbrains:service"/g
@@ -439,57 +439,11 @@ s/"ULTA.*"/"ulta beauty:retail"/g
 s/"WAKE RADIOLOGY CONSULTAN.*"/"wake radiology:medical"/g
 s/"WHOLEFDS.*"/"whole foods:grocery"/g
 s/"WWW\.TABLOTV\.COM.*"/"tablo tv:service"/g
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+s/"DIERBERGS.*"/"dierbergs:grocery"/g
+s/"STLHOLOCAUSTMUSEUM.*"/"holocaust museum:travel"/g
+s/"SSM SLUH CAFETERIA.*"/"ssm hospital cafeteria:food"/g
+s/"KLS FINANCIAL SERVICES.*"/"kls financial:medical"/g
+s/"SCHNUCKS.*"/"schnucks:grocery"/g
+s/"SQ \*A A PLUMBER.*"/"william the plumber:home"/g
+s/"TST\* Drunken Fish.*"/"drunken fish:food"/g
+s/"MENS WEARHOUSE.*"/"mens warehouse:clothing"/g

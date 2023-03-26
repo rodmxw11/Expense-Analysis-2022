@@ -126,22 +126,24 @@ s/"CNTY\\/YLLW CAB.*"/"stl yellow cab:travel"/g
 
         where:
         expected_tags | description
-        UNKNOWN_TAGS | 'mary had a little lamb'
-        ['helicopter solutions','travel'] | 'helicopter solutions NA, LTD'
-        ['hibachi grill','food'] | 'hibachi-seasoning in RTP'
-        ['hot topic myrtle beach', 'travel'] | 'hot topical paradise'
-        ['amazon.com','delivery'] | 'amazonprime books'
-        ['amazon.com','delivery'] | 'amazon prime books'
-        ['amazon video','service'] | 'amazon video service'
-        ['amazon video','service'] | 'prime video service'
-        ['breuggers bagels', 'food'] | 'BRUEGGERS bagels'
-        ['breuggers bagels', 'food'] | "sq *BRUEGGER'S bagels"
-        ['apple online','service'] | 'APL*ITUNES online'
-        ['apple online','service'] | 'apple.com online'
-        ['consumer reports','service'] | 'consumerreports yearly subscription'
-        ['consumer reports','service'] | 'CONSUMERRPRTS yearly subscription'
-        ['consumer reports','service'] | 'cr *consumer yearly subscription'
-        ['consumer reports','service'] | 'cr digital media yearly subscription'
-        ['stl yellow cab','travel'] | 'cnty/yllw cab ladue to creve coeur'
+//        UNKNOWN_TAGS | 'mary had a little lamb'
+//        ['helicopter solutions','travel'] | 'helicopter solutions NA, LTD'
+//        ['hibachi grill','food'] | 'hibachi-seasoning in RTP'
+//        ['hot topic myrtle beach', 'travel'] | 'hot topical paradise'
+//        ['amazon.com','delivery'] | 'amazonprime books'
+//        ['amazon.com','delivery'] | 'amazon prime books'
+//        ['amazon video','service'] | 'amazon video service'
+//        ['amazon video','service'] | 'prime video service'
+//        ['breuggers bagels', 'food'] | 'BRUEGGERS bagels'
+//        ['breuggers bagels', 'food'] | "sq *BRUEGGER'S bagels"
+//        ['apple online','service'] | 'APL*ITUNES online'
+//        ['apple online','service'] | 'apple.com online'
+//        ['consumer reports','service'] | 'consumerreports yearly subscription'
+//        ['consumer reports','service'] | 'CONSUMERRPRTS yearly subscription'
+//        ['consumer reports','service'] | 'cr *consumer yearly subscription'
+//        ['consumer reports','service'] | 'cr digital media yearly subscription'
+//        ['stl yellow cab','travel'] | 'cnty/yllw cab ladue to creve coeur'
+        ['state farm insurance','autos'] | 'STATE FARM INSURANCE 800-956-6310 IL'
+        ['uber rides','travel'] | 'UBER TRIP HELP.UBER.COM CA'
     }
 }
