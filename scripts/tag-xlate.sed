@@ -103,7 +103,7 @@ s/"NC QUICK PASS.*"/"nc quick pass:travel"/g
 s/"(NCSU|NC STATE).*"/"nc state:school"/g
 s/"NORTH CAROLINA STATE UNIV.*"/"nc state:school"/g
 s/"NEO-ASIA.*"/"neo asia:food"/g
-s/"netflix.com.*"/"netflix:service"/gi
+s/"netflix.com.*"/"netflix:service"/g
 s/"OLIVE GARD.*"/"olive garden:food"/g
 s/"OMALLEYS.*"/"omalleys:food"/g
 s/"PACIFIC BEACHWEAR.*"/"pacific beachwear:retail"/g
@@ -257,7 +257,7 @@ s/"RALEIGH UTILITY BILL.*"/"raleigh water sewer:utility"/g
 s/"Randys Pizza.*"/"randys pizza:food"/g
 s/"BAR TACO.*"/"bar taco:food"/g
 s/"CHARGRILL.*"/"chargrill:food"/g
-s/CHEDDAR UP PAYMENT.*"/"cheddar up payment:misc"/g
+s/"CHEDDAR UP PAYMENT.*"/"cheddar up payment:misc"/g
 s/"CHE EMPANADAS.*"/"che empanadas:food"/g
 s/"CHEESECAKE.*"/"cheesecake factory:food"/g
 s/"CHELSEA CAFE.*"/"chelsea cafe:food"/g
