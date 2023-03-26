@@ -48,7 +48,7 @@ s/"BP#.*"/"bp:gas"/g
 s/"BARNES & NOBLE.*"/"barns noble:retail"/g
 s/"AUTOZONE.*"/"autozone:autos"/g
 s/"BEST BUY.*"/"best buy:retail"/g
-s/"(BRUEGGERS|SQ \*BRUEGGER'S BAGELS).*"/"breuggers bagels:food"/g
+s/"(BRUEGGERS|BRUEGGER'S BAGELS).*"/"breuggers bagels:food"/g
 s/"BOJANGLES.*"/"bojangles:food"/g
 s/"CHICK\-FIL\-A.*"/"chick-fil-a:food"/g
 s/"(CHINA ?TOWN|FOOD AT CHINA EXPRESS|BM CHINATOWN EXPRESS).*"/"chinatown express:food"/g
@@ -200,41 +200,41 @@ s/"PARADISE INDIAN.*"/"paradise indian cuisine:food"/g
 s/"PARKER'S #.*"/"parker's 54:food"/g
 s/"PATEL BRO.*"/"patel brothers:grocery"/g
 s/"Payment Thank You.*"/"amazon payment:payment"/g
-s/"PAYPAL \*AERCRECYCLI.*"/"aerc recycling:misc"/g
-s/"PAYPAL \*ANCESTRYCOM.*"/"ancestry.com:service"/g
-s/"PAYPAL \*ANTENNAMANL.*"/"antenna man:service"/g
-s/"PAYPAL \*AUTOZONEINC.*"/"autozone:autos"/g
-s/"PAYPAL \*BITWARDEN.*"/"bitwarden:service"/g
-s/"PAYPAL \*BM.*"/"paypal bm:misc"/g
-s/"PAYPAL \*CARFAXINC.*"/"carfax:autos"/g
-s/"PAYPAL \*DOMINO'S.*"/"dominos:food"/g
-s/"PAYPAL \*EBAY.*"/"ebay:delivery"/g
-s/"PAYPAL \*ECSTUNING.*"/"ecstuning:autos"/g
-s/"PAYPAL \*FEVER.*"/"paypal fever:misc"/g
-s/"PAYPAL \*FOOD ONLINE CHIN.*"/"chinatown express:food"/g
-s/"PAYPAL \*HOME DEPOT.*"/"home depot:tools"/g
-s/"PAYPAL \*IDPARTS.*"/"idparts:autos"/g
-s/"PAYPAL \*INNOVATEPC.*"/"innova tech:delivery"/g
-s/"PAYPAL \*ISLANDGROCE.*"/"island groceries:delivery"/g
-s/"PAYPAL \*LEANPUB.*"/"leanpub:service"/g
-s/"PAYPAL \*LOWES\.COM.*"/"lowes hardware:tools"/g
-s/"PAYPAL \*MEDIUM\.COM.*"/"medium.com:service"/g
-s/"PAYPAL \*MICROSOFTSTORE.*"/"microsoft store:service"/g
-s/"PAYPAL \*NAMI WAKE.*"/"nami:donation"/g
-s/"PAYPAL \*NY TIMES.*"/"nytimes:service"/g
-s/"PAYPAL \*OAKPARKPOO.*"/"oak park pool:home"/g
-s/"PAYPAL \*ORATOR LLC.*"/"orator llc:service"/g
-s/"PAYPAL \*PADDLE\.COM.*"/"cursive intellij plugin:service"/g
-s/"PAYPAL \*PEARSONEDUC.*"/"pearson education:school"/g
-s/"PAYPAL \*SAFELITE.*"/"safelite glass:autos"/g
-s/"PAYPAL \*SCOOTERSOF.*"/"scooter software:service"/g
-s/"PAYPAL \*TAGCROWDCOM.*"/"tag crowd.com:service"/g
-s/"PAYPAL \*TEQUIPMENT.*"/"te equipment:delivery"/g
-s/"PAYPAL \*VIDAXLLLC.*"/"vidaxl llc:service"/g
-s/"PAYPAL \*VIDAXLLLC.*"/"vidax llc:service"/g
-s/"PAYPAL \*WAYFAIR.*"/"wayfair:delivery"/g
-s/"PAYPAL \*WIKIPEDIA.*"/"wikipedia:donation"/g
-s/"PAYPAL \*ZENNIOPTICL.*"/"zenni optical:medical"/g
+s/"AERCRECYCLI.*"/"aerc recycling:misc"/g
+s/"ANCESTRYCOM.*"/"ancestry.com:service"/g
+s/"ANTENNAMANL.*"/"antenna man:service"/g
+s/"AUTOZONEINC.*"/"autozone:autos"/g
+s/"BITWARDEN.*"/"bitwarden:service"/g
+s/"BM.*"/"paypal bm:misc"/g
+s/"CARFAXINC.*"/"carfax:autos"/g
+s/"DOMINO'S.*"/"dominos:food"/g
+s/"EBAY.*"/"ebay:delivery"/g
+s/"ECSTUNING.*"/"ecstuning:autos"/g
+s/"FEVER.*"/"paypal fever:misc"/g
+s/"FOOD ONLINE CHIN.*"/"chinatown express:food"/g
+s/"HOME DEPOT.*"/"home depot:tools"/g
+s/"IDPARTS.*"/"idparts:autos"/g
+s/"INNOVATEPC.*"/"innova tech:delivery"/g
+s/"ISLANDGROCE.*"/"island groceries:delivery"/g
+s/"LEANPUB.*"/"leanpub:service"/g
+s/"LOWES\.COM.*"/"lowes hardware:tools"/g
+s/"MEDIUM\.COM.*"/"medium.com:service"/g
+s/"MICROSOFTSTORE.*"/"microsoft store:service"/g
+s/"NAMI WAKE.*"/"nami:donation"/g
+s/"NY TIMES.*"/"nytimes:service"/g
+s/"OAKPARKPOO.*"/"oak park pool:home"/g
+s/"ORATOR LLC.*"/"orator llc:service"/g
+s/"PADDLE\.COM.*"/"cursive intellij plugin:service"/g
+s/"PEARSONEDUC.*"/"pearson education:school"/g
+s/"SAFELITE.*"/"safelite glass:autos"/g
+s/"SCOOTERSOF.*"/"scooter software:service"/g
+s/"TAGCROWDCOM.*"/"tag crowd.com:service"/g
+s/"TEQUIPMENT.*"/"te equipment:delivery"/g
+s/"VIDAXLLLC.*"/"vidaxl llc:service"/g
+s/"VIDAXLLLC.*"/"vidax llc:service"/g
+s/"WAYFAIR.*"/"wayfair:delivery"/g
+s/"WIKIPEDIA.*"/"wikipedia:donation"/g
+s/"ZENNIOPTICL.*"/"zenni optical:medical"/g
 s/"PEPBOYS.*"/"pepboys:autos"/g
 s/"PERSIS INDIAN.*"/"persis indian grill:food"/g
 s/"PHOENIX LIMITED PARTNERSH.*"/"phoenix partners:misc"/g
@@ -343,8 +343,8 @@ s/"MED\*RALEIGH ENDO.*"/"raleigh endo center:medical"/g
 s/"MENCHIE`S FROZEN.*"/"menchie's frozen yogurt:food"/g
 s/"MINUTEKEY.*"/"minute key dup:home"/g
 s/"MO BOT GDN.*"/"missouri butterfly museum:travel"/g
-s/"PAYPAL \*CARID.COM.*"/"carid.com:autos"/g
-s/"PAYPAL \*VLADSCH.COM.*"/"vladsh.com:misc"/g
+s/"CARID.COM.*"/"carid.com:autos"/g
+s/"VLADSCH.COM.*"/"vladsh.com:misc"/g
 s/"PETCO.*"/"petco:retail"/g
 s/"RALEIGH PARKING METERS.*"/"raleigh parking:travel"/g
 s/"RDUAA PUBLIC.*"/"rdu parking:travel"/g
@@ -369,19 +369,20 @@ s/"SOHO STEAK.*"/"soho steak:food"/g
 s/"SOPHIAMSACH.*"/"butterfly museum:travel"/g
 s/"SPEEDWAY.*"/"speedway gas:gas"/g
 s/"SP \* MONUMENT GRILLS.*"/"monument grills:delivery"/g
-s/"SQ \*266 PELICAN'S SNOBALL.*"/"pelican snoball:food"/g
-s/"SQ \*ARCH CAFE.*"/"arch cafe nyc:food"/g
-s/"SQ \*AROMA KOREA.*"/"aroma korean:food"/g
-s/"SQ \*BAZIL INDIAN.*"/"bazil indian cuisine:food"/g
-s/"SQ \*BROADWAY AT THE BEACH.*"/"broadway myrtle beach:travel"/g
-s/"SQ \*BRUEGGER'S BAGELS.*"/"breuggers bagels:food"/g
-s/"SQ \*CUSTOM STATION.*"/"custom station myrtle beach:travel"/g
-s/"SQ \*GROOVY DUCK BAKERY.*"/"groovy duck bakery:food"/g
-s/"SQ \*GUSSY'S PLACE.*"/"gussy's place:food"/g
-s/"SQ \*HOLLYWOOD HEROES.*"/"hollywood heroes:food"/g
-s/"SQ \*RALEIGH - VAN GOGH.*"/"van gogh exhibit:misc"/g
-s/"SQ \*THAI BISTRO.*"/"thai bistro:food"/g
-s/"SQ \*TRIANGLE RECONSTRUCTI.*"/"triangle reconstruction:home"/g
+s/"266 PELICAN'S SNOBALL.*"/"pelican snoball:food"/g
+s/"BTR PELICANS.*"/"pelican snoball:food"/g
+s/"ARCH CAFE.*"/"arch cafe nyc:food"/g
+s/"AROMA KOREA.*"/"aroma korean:food"/g
+s/"BAZIL INDIAN.*"/"bazil indian cuisine:food"/g
+s/"BROADWAY AT THE BEACH.*"/"broadway myrtle beach:travel"/g
+s/"BRUEGGER'S BAGELS.*"/"breuggers bagels:food"/g
+s/"CUSTOM STATION.*"/"custom station myrtle beach:travel"/g
+s/"GROOVY DUCK BAKERY.*"/"groovy duck bakery:food"/g
+s/"GUSSY'S PLACE.*"/"gussy's place:food"/g
+s/"HOLLYWOOD HEROES.*"/"hollywood heroes:food"/g
+s/"RALEIGH - VAN GOGH.*"/"van gogh exhibit:misc"/g
+s/"THAI BISTRO.*"/"thai bistro:food"/g
+s/"TRIANGLE RECONSTRUCTI.*"/"triangle reconstruction:home"/g
 s/"SSM HEALTH SLUH PARKING.*"/"ssm hospital parking:travel"/g
 s/"STATE FARM INSURANCE.*"/"state farm insurance:autos"/g
 s/"ST\. LOUIS AIRPORT TAXI.*"/"st louis airport taxi:travel"/g
@@ -444,6 +445,21 @@ s/"STLHOLOCAUSTMUSEUM.*"/"holocaust museum:travel"/g
 s/"SSM SLUH CAFETERIA.*"/"ssm hospital cafeteria:food"/g
 s/"KLS FINANCIAL SERVICES.*"/"kls financial:medical"/g
 s/"SCHNUCKS.*"/"schnucks:grocery"/g
-s/"SQ \*A A PLUMBER.*"/"william the plumber:home"/g
+s/"A A PLUMBER.*"/"william the plumber:home"/g
 s/"TST\* Drunken Fish.*"/"drunken fish:food"/g
 s/"MENS WEARHOUSE.*"/"mens warehouse:clothing"/g
+s/"SP SANCTUARY GIRL.*"/"christian bookstore:retail"/g
+s/"TRIANGLE POP-UP.*"/"christian bookstore:retail"/g
+s/"Offer:Audible.*"/"audible:service"/g
+s/"LGBS: ERC TOLLS.*"/"toll road?:travel"/g
+s/"BRIGS GREAT BEGINNINGS.*"/"briggs:food"/g
+s/"COSTCO WHSE.*"/"costco:retail"/g
+s/"WWW COSTCO.*"/"costco:home"/g
+s/"TRIMBLE INC.*"/"sketchup:service"/g
+s/"UNC CH DPS PAY.*"/"unc hosp parking:travel"/g
+s/"TST\* The Bowls.*"/"bowls restaurant:food"/g
+s/"YOHO HIBACHI.*"/"yoho sushi:food"/g
+s/"CHOPSTICKS AND.*"/"chopsticks rest:food"/g
+s/"RELISH CRAFT KITCHEN.*"/"relish craft:food"/g
+s/"TARUN AGARWAL.*"/"dental arts:medical"/g
+s/"USA\*MINUTE KEY.*"/"key making machine:home"/g

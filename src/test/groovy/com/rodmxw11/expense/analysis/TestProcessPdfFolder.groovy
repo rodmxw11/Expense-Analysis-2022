@@ -83,11 +83,17 @@ class TestProcessPdfFolder extends Specification {
         raw || fmt
         null || ''
         '' || ''
+        '&' || ''
+        '   &' || ''
         '                   ' || '' // trimmed
         'Hello World!' || 'Hello World!'
+        '& Hello World!' || 'Hello World!'
         '         Hello          Good        World!      ' || 'Hello Good World!' // single spaces
+        '      &   Hello          Good        World!      ' || 'Hello Good World!' // single spaces
         '"Hello World!"' || "'Hello World!'" // double quotes repl with quotes
+        '& "Hello World!"' || "'Hello World!'" // double quotes repl with quotes
         '              "Hello             World!"           ' || "'Hello World!'"
+        '          &    "Hello             World!"           ' || "'Hello World!'"
     }
 
     def "test fmt_date()"() {

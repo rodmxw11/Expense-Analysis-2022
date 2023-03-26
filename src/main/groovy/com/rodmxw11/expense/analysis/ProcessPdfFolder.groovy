@@ -46,7 +46,26 @@ class ProcessPdfFolder {
     }
 
     static String fmt_text(String text) {
-        return text?text.trim().replaceAll(/\s+/,' ').replaceAll('"',"'"):''
+        // & MCDONALD'S F15546
+        if (text==null) {
+            return ''
+        }
+
+        text = text.trim()
+
+        if (text.startsWith('&')) {
+            text = text.substring(1).trim()
+        }
+
+        if (text.startsWith('SQ *')) {
+            text = text.substring(4).trim()
+        }
+
+        if (text.startsWith('PAYPAL *')) {
+            text = text.substring(8).trim()
+        }
+
+        return text.replaceAll(/\s+/,' ').replaceAll('"',"'")
     }
 
     static List<List<String>> parse_line_items(String file_text) {
@@ -72,7 +91,8 @@ class ProcessPdfFolder {
            String xtra
         ) = [items[0], items[1], items[2], items[3]]
 
-        def strings = tags_xlate_matcher.lookupTags(description)
+        String formatted_description = fmt_text(description)
+        def strings = tags_xlate_matcher.lookupTags(formatted_description)
         def (
            String tag1,
            String tag2
@@ -81,7 +101,7 @@ class ProcessPdfFolder {
         String csv_row = String.format(
                 CSV_ROW_FORMAT,
                 fmt_date(year, date),
-                fmt_text(description),
+                formatted_description,
                 fmt_dollars(amount),
                 fmt_text(xtra),
                 tag1,
