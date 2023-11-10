@@ -1,0 +1,111 @@
+databaseChangeLog:
+
+  - changeSet:
+      id: top-level-db-definitions
+      author: rodmxw11
+      changes:
+
+        # describes statement CSV file
+        - createTable:
+            tableName: transaction
+            columns:
+              - column:
+                  name: filename
+                  type: varchar(512)
+                  constraints:
+                    nullable: false
+              - column: # csv line number
+                  name: linenumber
+                  type: int
+                  constraints:
+                    nullable: false
+              - column: # transaction date
+                  name: date
+                  type: varchar(10)
+                  constraints:
+                    nullable: false
+              - column: # description
+                  name: description
+                  type: varchar(512)
+                  constraints:
+                    nullable: false
+              - column: # amount
+                  name: amount
+                  type: varchar(16)
+                  constraints:
+                    nullable: false
+              - column: # extra info
+                  name: extra
+                  type: varchar(512)
+                  constraints:
+                    nullable: true
+              - column: # short description
+                  name: short
+                  type: varchar(512)
+                  constraints:
+                    nullable: false
+              - column: # category
+                  name: tag
+                  type: varchar(32)
+                  constraints:
+                    nullable: false
+
+        # A csv file of data
+        - createTable:
+            tableName: summary
+            columns:
+              - column:
+                  name: filename
+                  type: varchar(512)
+                  constraints:
+                    nullable: false
+              - column: # open date
+                  name: open_date
+                  type: varchar(16)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: close_date
+                  type: varchar(16)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: new_bal
+                  type: varchar(16)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: bonus_points
+                  type: varchar(16)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: prev_bal
+                  type: varchar(16)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: payments
+                  type: varchar(16)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: purchases
+                  type: varchar(16)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: cash_advance
+                  type: varchar(16)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: fees
+                  type: varchar(16)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: interest
+                  type: varchar(16)
+                  constraints:
+                    nullable: false
