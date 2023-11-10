@@ -23,7 +23,7 @@ test {
     useJUnitPlatform()
 }
 
-task runProcessPdfFolder(type: JavaExec) {
+task pdfProcess(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
 
     mainClass = 'com.rodmxw11.expense.analysis.ProcessPdfFolder'

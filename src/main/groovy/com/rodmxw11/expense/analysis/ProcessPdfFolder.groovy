@@ -251,10 +251,6 @@ class ProcessPdfFolder {
     }
 
     static void main(String[] args) {
-//        assert args.length>0, "Usage: groovy process-pdf-folder.groovy <year>"
-//        String year = args[0]
-//        assert year!=null, "year cannot be null"
-
         Map<String, String> props = getProperties()
         println props
         //System.exit(0)
