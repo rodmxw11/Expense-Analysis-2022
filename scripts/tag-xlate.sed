@@ -421,7 +421,7 @@ s/"Volkswagen AG.*"/"vw:autos"/g
 s/"WAKE COUNTY REVENUE DEPT.*"/"wake co revenue:taxes"/g
 s/"WAKEMEDIC AUBONPAIN.*"/"au bon pain:food"/g
 s/"WAL-MART CHECK PRINTNG.*"/"walmart check printing:misc"/g
-s/"WASHINGTON PASSPORT.*"/"washington passport office:misc"/g
+s/"WASHINGTON PASSPORT.*"/"washington passport office:travel"/g
 s/"WAWA.*"/"wawa gas:gas"/g
 s/"WC REGISTER OF DEEDS.*"/"wake co registry of deeds:misc"/g
 s/"WEGMANS.*"/"wegmans:grocery"/g
@@ -463,3 +463,16 @@ s/"CHOPSTICKS AND.*"/"chopsticks rest:food"/g
 s/"RELISH CRAFT KITCHEN.*"/"relish craft:food"/g
 s/"TARUN AGARWAL.*"/"dental arts:medical"/g
 s/"USA\*MINUTE KEY.*"/"key making machine:home"/g
+s/"2LEVY.*"/"levy appetize:food"/g
+s/"ART INST.*"/"art institute:travel"/g
+s/"AU BON PAIN.*"/"au bon pain:food"/g
+s/"BIGBY COFFEE.*"/"bigby coffee:food"/g
+s/"CABINET DIY.*"/"cabinet diy:home"/g
+s/"Carts SmarteCarte.*"/"smart cart:travel"/g
+s/"CHATGPT.*"/"chatgpt:service"/g
+s/"CONDE NAST WIRED.*"/"wired mag:service"/g
+s/"DECK THE NECK.*"/"deck the neck:retail"/g
+s/"DEN MART CHARLOTTE.*"/"den mart charlotte:food"/g
+s/"DISCOUNT TIRE.*"/"discount tire:autos"/g
+s/"DMV LIABILITY INS.*"/"dmv penalty:autos"/g
+
